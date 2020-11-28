@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+body{
+    width: 100vw;
+    height: 100%;
+
+    font-size: 6vw;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box
+}
+
+/*  Страница Login  */
+
+.page-login{
+    width: 100vw;
+    height: 80vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    box-sizing: border-box
+}   
+
+/*  Статус  */
+.page-login .block-message{
+
+}
+
+/*  Input   */
+.page-login .block-input{
+    margin: 2rem 0;
+    box-sizing: border-box;
+    width: 80%;
+}
+
+.page-login .block-input input{
+    border-radius: 0px;
+    border: 2px solid lightslategray;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.page-login .block-input input:focus{
+    outline: none;
+}
+
+/*  Кнопка входа    */
+.page-login .block-button{
+
+}
+
+
+
+
+
+
+
+/*  Страница Users  */
+
+.page-users{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    font-size: 2rem;
+}
+
+/*  top   */
+.page-users .block-top{
+    border-bottom: 1px solid grey;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-users .block-top .online-status{
+    width: 1rem;
+    height: 1rem;
+}
+
+.page-users .block-top .online-status .on{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;    
+    background-color: #47925b;
+}
+
+.page-users .block-top .online-status .off{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;    
+    background-color: #ec0606;
+}
+
+
+/*  список пользователей   */
+.page-users .block-online{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*  пользователь   */
+.page-users .block-online .user{
+    border-bottom: 1px solid grey;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-users .block-online .user .user-avatar{
+    height: 4rem;
+    width: 4rem;
+}
+
+.page-users .block-online .user .user-avatar img{
+    border-radius: 3rem;
+
+    height: 100%;
+    width: auto;
+}
+
+.page-users .block-online .user .user-name{
+    color: #1b1b1b;
+    width: 100%;
+    margin: 0 1rem;
+}
+
+
+/*  remote  */
+.page-users .block-online .user .remote .call-button {  /*  state 1     */
+    display: none;
+}
+.page-users .block-online .user .remote .wait {         /*  state 2     */
+    display: none;
+}
+.page-users .block-online .user .remote .list-button {  /*  state 3     */
+    display: none;
+}
+
+.page-users .block-online .user.state-stay .remote .call-button {  /*  state 1     */
+    display: block;
+    color: #47925b;
+    cursor: pointer;
+}
+
+.page-users .block-online .user.state-stay .remote .call-button:hover{
+    color: #2a5836;
+}
+
+.page-users .block-online .user.state-wait .remote .wait {         /*  state 2     */
+    display: block;
+}
+.page-users .block-online .user.state-call .remote .list-button {  /*  state 3     */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.page-users .block-online .user.state-call .remote .list-button .one-button{ 
+    margin: 0 1rem;
+}
+
+.page-users .block-online .user.state-call .remote .list-button .one-button.button-mute{ 
+    display: none;
+}
+
+.page-users .block-online .user.state-call .remote .list-button .one-button.button-end{ 
+    color: #ec0606;
+}
+
+
+/*  audio */
+.page-users .block-online .user .remote audio {
+
+}
